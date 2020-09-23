@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import { Header } from "./components";
 import { Home, MyProfile, AboutUs, Products, ProductDetails } from "./pages";
 import "./App.css";
@@ -43,6 +48,8 @@ class App extends Component {
               <Route exact path="/about-us" component={AboutUs} />
               <Route exact path="/products" component={Products} />
               <Route exact path="/products/:id" component={ProductDetails} />
+              <Redirect from="/goods" to="/products" />
+              <Route component={Home} />
             </Switch>
           </main>
         </Router>
