@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  height: 50px;
+
+  background-color: lightgray;
+}
+
+header a {
+  margin-right: 30px;
+
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+
+a.active {
+  text-decoration: underline;
+}
