@@ -4,32 +4,17 @@ import "./Header.css";
 
 export const Header = withRouter(
   class extends Component {
-    pages = [
-      {
-        path: "/",
-        name: "Home",
-      },
-      {
-        path: "/my-profile",
-        name: "My Profile",
-      },
-      {
-        path: "/about-us",
-        name: "About Us",
-      },
-    ];
-
     render() {
-      const { pages } = this;
+      const { links } = this.props;
       const { pathname: currentPath } = this.props.location;
 
       return (
         <header>
-          {pages.map(({ name, path }) => (
+          {links.map(({ name, pathRegex, to }) => (
             <Link
-              key={path}
-              to={path}
-              className={currentPath === path ? "active" : ""}
+              key={to}
+              to={to}
+              className={pathRegex.test(currentPath) ? "active" : ""}
             >
               {name}
             </Link>

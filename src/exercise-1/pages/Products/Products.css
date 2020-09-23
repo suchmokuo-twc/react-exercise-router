@@ -1,0 +1,12 @@
+.products {
+  font-weight: 500;
+}
+
+.products a {
+  display: block;
+
+  margin: 5px 0;
+
+  color: red;
+  text-decoration: none;
+}
