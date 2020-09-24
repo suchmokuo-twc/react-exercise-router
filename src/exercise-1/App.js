@@ -49,7 +49,7 @@ class App extends Component {
               <Route exact path="/products" component={Products} />
               <Route exact path="/products/:id" component={ProductDetails} />
               <Redirect from="/goods" to="/products" />
-              <Route component={Home} />
+              <Redirect from="*" to="/" />
             </Switch>
           </main>
         </Router>
